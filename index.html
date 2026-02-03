@@ -2,12 +2,29 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Test Pages</title>
+  <title>Animacja p5.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
 </head>
 <body>
-  <h1>GitHub Pages działa 🎉</h1>
-  <script>
-    document.body.style.background = "lightblue";
-  </script>
+
+<script>
+let x = 10;
+let dx = 2;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(200, 255, 255); 
+  circle(x, 200, 20);
+
+  x = x + dx;
+
+  if (x > 390) dx = -2;
+  if (x < 10) dx = 2;
+}
+</script>
+
 </body>
 </html>
